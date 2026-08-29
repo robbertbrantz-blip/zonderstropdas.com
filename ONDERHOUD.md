@@ -1,6 +1,6 @@
 # Onderhoud zonderstropdas.com
 
-*Laatst bijgewerkt: 11 juni 2026 — site live*
+*Laatst bijgewerkt: 29 augustus 2026 — homepage omgebouwd tot boeklandingspagina*
 
 ## Hoe de site in elkaar zit
 
@@ -28,7 +28,14 @@
 
 | Bestand | Wat het is |
 |---------|------------|
-| `index.html` | De hoofdpagina — het hele verhaal. Alle styling zit erin (geen losse CSS). |
+| `index.html` | De hoofdpagina — boekpromotie *AI Won't Wipe My Mother's Ass* (Engels). Alle styling zit erin (geen losse CSS). |
+| `about.html` | Het persoonlijke verhaal, Engelse versie |
+| `about-nl.html` | Het persoonlijke verhaal, Nederlandse versie (was voorheen `index.html`) |
+| `sitemap.xml` | Sitemap voor Google — indienen via Search Console |
+| `cover-ai-wont-wipe.jpg` | Voorkant boekcover (1000×1600) |
+| `cover-ai-wont-wipe-back.jpg` | Achterkant boekcover met flaptekst |
+| `og-image.jpg` | Deelafbeelding 1200×630 voor LinkedIn/WhatsApp/X |
+| `look-inside.pdf` | Inkijkexemplaar, 9 pagina's |
 | `innercalm.html` | Projectpagina InnerCalm+ (incl. App Store-knop) |
 | `bmgrb.html` | Projectpagina BMGRB (incl. knop naar bmgrb.com) |
 | `nomoclub.html` | Projectpagina NOMOCLUB Music (incl. link nomoclub.com) |
@@ -78,3 +85,14 @@ Open Cowork met deze map als project en zeg wat er anders moet — Claude kent d
 ---
 
 *Mail bmgrb.com is apart geregeld (11 juni 2026): SPF met Google ✓, DKIM ✓, DMARC `p=none; rua=mailto:info@bmgrb.com` ✓ — rapporten komen binnen op info@bmgrb.com.*
+
+
+## Boekpagina — wat je zelf nog kunt aanpassen
+
+- **Winkellinks.** De winkels staan als lopende tekst in de sectie *Get the book*. Wil je later directe productlinks, zet die dan in die alinea.
+- **LinkedIn.** De knop *Start the conversation on LinkedIn* wijst naar `linkedin.com/in/robbert-brantz-6021399/`.
+- **Prijs, ISBN, datum** staan zowel in de feitentabel als in de structured data (`<script type="application/ld+json">` bovenin `index.html`). Pas je er één aan, pas dan allebei aan.
+
+## Na een wijziging aan de structuur
+
+Sitemap opnieuw indienen in Google Search Console: `https://zonderstropdas.com/sitemap.xml`.

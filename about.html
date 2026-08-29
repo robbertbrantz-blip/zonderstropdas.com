@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Robbert Brantz — the honest story | Zonder Stropdas</title>
+<meta name="description" content="Thirty-six years of work, business and technology up close — from a cassette tape to AI. An honest story about what worked, what failed and what life did.">
+<meta name="author" content="Robbert Brantz">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<meta property="og:title" content="About Robbert Brantz — the honest story">
+<meta property="og:description" content="From handwritten forms to AI: 36 years of change up close. Told honestly — including what failed and what life did.">
+<meta property="og:url" content="https://zonderstropdas.com/about.html">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Zonder Stropdas">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:image" content="https://zonderstropdas.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="https://zonderstropdas.com/about.html">
+<link rel="alternate" hreflang="en" href="https://zonderstropdas.com/about.html">
+<link rel="alternate" hreflang="nl" href="https://zonderstropdas.com/about-nl.html">
+<link rel="alternate" hreflang="x-default" href="https://zonderstropdas.com/about.html">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<style>
+  :root {
+    --bg: #f8fbfc;
+    --bg-alt: #eef3f5;
+    --ink: #3f4347;
+    --ink-soft: #67707a;
+    --accent: #00a0c6;
+    --accent-deep: #007a99;
+    --sand: #a8c4cf;
+    --line: #dce6ea;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+  a { color: var(--accent-deep); }
+
+  /* Top bar */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(248,251,252,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: 940px; margin: 0 auto; padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .topbar a { color: var(--ink-soft); text-decoration: none; }
+  .topbar a:hover { color: var(--accent-deep); }
+  .topbar .home { color: var(--accent); letter-spacing: 0.28em; }
+  .topbar nav { display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
+  .lang { border-left: 1px solid var(--line); padding-left: 1.2rem; }
+  .lang a.on { color: var(--accent-deep); font-weight: 700; }
+
+  /* Book bar */
+  .bookbar { background: var(--accent-deep); color: #eaf5f8; }
+  .bookbar-inner {
+    max-width: 940px; margin: 0 auto; padding: 0.85rem 1.5rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem;
+    align-items: center; justify-content: center; text-align: center;
+    font-size: 0.95rem;
+  }
+  .bookbar a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5); }
+  .bookbar a:hover { border-bottom-color: #fff; }
+
+  /* Hero */
+  header {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  }
+  .brand {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 5.5vw, 3.2rem);
+    font-weight: normal;
+    line-height: 1.3;
+    max-width: 18em;
+    margin: 0 auto 1.5rem;
+  }
+  h1 em { font-style: italic; color: var(--accent-deep); }
+  .sub {
+    color: var(--ink-soft);
+    font-size: 1.15rem;
+    max-width: 34em;
+    margin: 0 auto;
+  }
+  .scroll-hint { margin-top: 3rem; color: var(--sand); font-size: 1.5rem; }
+
+  /* Sections */
+  section { padding: 4.5rem 0; scroll-margin-top: 3.2rem; }
+  section.alt { background: var(--bg-alt); }
+  h2 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-deep);
+  }
+  h3.kop {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--accent-deep);
+    margin: 2.2rem 0 0.8rem;
+  }
+  p + p { margin-top: 1.2rem; }
+  .lead { font-size: 1.25rem; font-style: italic; color: var(--ink-soft); }
+
+  blockquote {
+    border-left: 3px solid var(--sand);
+    padding: 0.4rem 0 0.4rem 1.4rem;
+    margin: 2.2rem 0;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--accent-deep);
+  }
+
+  /* Constants */
+  .constanten {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+  }
+  .constante {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    padding: 1.4rem 1.5rem;
+  }
+  section.alt .constante { background: #fff; }
+  .constante h3 {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .constante p { font-size: 1rem; color: var(--ink-soft); }
+
+  /* Buttons */
+  .btn-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
+  .btn {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.9rem; text-decoration: none;
+    padding: 0.75rem 1.4rem; border-radius: 2rem; display: inline-block;
+    border: 1px solid var(--accent-deep); transition: all 0.15s ease;
+  }
+  .btn-primary { background: var(--accent-deep); color: #fff; }
+  .btn-primary:hover { background: #005f78; border-color: #005f78; }
+  .btn-ghost { background: transparent; color: var(--accent-deep); }
+  .btn-ghost:hover { background: rgba(0,160,198,0.09); }
+
+  /* Contact */
+  .contact { text-align: center; }
+  .contact .email {
+    font-size: 1.25rem;
+    color: var(--accent-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--sand);
+  }
+  footer {
+    text-align: center;
+    padding: 2.5rem 1.5rem 3rem;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--ink-soft); }
+
+  @media (max-width: 720px) {
+    section { padding: 3.2rem 0; }
+  }
+
+  @media (max-width: 760px) {
+    .topbar-inner { flex-direction: column; align-items: center; gap: 0.35rem; padding: 0.55rem 1rem; }
+    .topbar .home { font-size: 0.72rem; letter-spacing: 0.2em; }
+    .topbar nav {
+      gap: 0.9rem; font-size: 0.68rem; letter-spacing: 0.1em;
+      flex-wrap: nowrap; overflow-x: auto; max-width: 100%;
+      justify-content: flex-start; padding-bottom: 0.15rem;
+      scrollbar-width: none;
+    }
+    .topbar nav::-webkit-scrollbar { display: none; }
+    .topbar nav a { white-space: nowrap; }
+    .lang { padding-left: 0.9rem; }
+    .bookbar-inner { padding: 0.7rem 1rem; font-size: 0.86rem; }
+    html { scroll-padding-top: 6.5rem; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://zonderstropdas.com/about.html#webpage",
+      "url": "https://zonderstropdas.com/about.html",
+      "name": "About Robbert Brantz",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://zonderstropdas.com/#website"
+      },
+      "description": "Thirty-six years of work, business and technology up close — from a cassette tape to AI. An honest story about what worked, what failed, what life did, and the one thing that never changes.",
+      "mainEntity": {
+        "@id": "https://zonderstropdas.com/#robbert"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://zonderstropdas.com/#robbert",
+      "name": "Robbert Brantz",
+      "url": "https://zonderstropdas.com/about.html",
+      "image": "https://zonderstropdas.com/logo.png",
+      "email": "robbert@zonderstropdas.com",
+      "jobTitle": "Author, independent entrepreneur and concept developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Zonder Stropdas Company",
+        "url": "https://zonderstropdas.com/",
+        "identifier": "KvK 27277851"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/robbert-brantz-6021399/"
+      ],
+      "knowsAbout": [
+        "Artificial intelligence",
+        "Digital transformation",
+        "Financial services",
+        "Independent entrepreneurship",
+        "Human-centred process design"
+      ],
+      "alumniOf": [],
+      "award": [
+        "InnoCentive Multiple Winning Solver (2012)"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Author"
+      },
+      "subjectOf": {
+        "@type": "Book",
+        "@id": "https://zonderstropdas.com/#book",
+        "name": "AI Won't Wipe My Mother's Ass",
+        "isbn": "9789083773605",
+        "url": "https://zonderstropdas.com/"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="home" href="index.html">zonderstropdas.com</a>
+    <nav>
+      <a href="index.html">The book</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#contact">Contact</a>
+      <span class="lang"><a href="about-nl.html">NL</a> / <a class="on" href="about.html">EN</a></span>
+    </nav>
+  </div>
+</div>
+
+<div class="bookbar">
+  <div class="bookbar-inner">
+    <span>New book: <em>AI Won't Wipe My Mother's Ass</em> — out 1 October 2026.</span>
+    <a href="index.html">See the book &rarr;</a>
+  </div>
+</div>
+
+<header>
+  <img src="logo.png" alt="Zonder Stropdas logo — a hand letting go of a necktie" style="width:230px;max-width:60vw;margin:0 auto 1.2rem;display:block;mix-blend-mode:multiply;">
+  <div class="brand">about robbert brantz</div>
+  <h1>I'm Robbert Brantz.<br><em>I never went to university. I never stopped learning.</em></h1>
+  <p class="sub">This is not a company and not a pitch. It is an honest story — about what worked, what failed, what life did along the way, and about the one constant through all those years: the human being in the process. Where it goes next, I don't know exactly. That isn't a weakness. It's the honest answer.</p>
+  <div class="scroll-hint">⌄</div>
+</header>
+
+<section id="story">
+  <div class="wrap">
+    <h2>How it started</h2>
+    <p class="lead">As a kid I recorded computer games off the radio. The code was broadcast, I sat ready with my cassette tape — and then edited that code to put myself at number one in the game.</p>
+    <p>My parents were always proud of me, even though they never quite understood what I did. And the strange thing was: I'd write some throwaway little poem at school and suddenly find myself among the regional prize winners. Later, at work, it went the same way — I rolled from one award to the next, not because I was trying. It just happened.</p>
+    <p>At fifteen I got tired of programming and picked up a guitar in a band — and soon found myself leading committees and boards. At eighteen I went back to programming. Those are the two tracks that would run through my entire life: the technology and the people.</p>
+    <p>I was always working; the greengrocer's shop and the sports club were my social life. My first real job: filling in forms by hand and on a typewriter, slips of paper collected every day and checked later once they had been processed. I ordered food through James, the very first online grocer, and clothes through a small modem — in an era when The Police, Dire Straits and U2 still played the sports hall around the corner.</p>
+    <p>ABN AMRO became my school. There I saw from the inside how a large organisation actually works — and how digitisation rolled through the bank in wave after wave. Then I chose to work for myself, and over the years, as an independent, I worked for very nearly every major financial institution in the Netherlands. Always without a necktie, always at the intersection of process, technology and people.</p>
+    <p>Then the world accelerated. Interfaces arrived; the form no longer had to be typed. Then websites of your own, with forms that dropped straight into your inbox. A CD-ROM from the shop that let you build your own webshop — and rebuild it around your own proposition. The webshop started talking to CRM systems, and words like SOAP and API appeared. And I simply learned along with it: from BASIC off a cassette tape, through PHP for the web and C++, to the cloud — and now Claude. Programming went from typing lines, to connecting building blocks, to simply saying what you mean. And so now there is AI.</p>
+    <p>What used to cost millions in development — all the people you needed to produce anything at all — can now sometimes cost nothing. Suddenly you build apps, you have websites that write themselves, and you pump a pop song out of your computer in an hour.</p>
+    <blockquote>Meanwhile, the tree in the garden still needs pruning.</blockquote>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>What I saw along the way</h2>
+    <p>I have seen jobs disappear and new ones appear. The most important thing I learned: however large the company, there is always a hard core within the teams that shapes the business and its culture. That core decides whether change succeeds — not the technology. And what many people fail to realise: the team is not the manager. It is the people without neckties who do all the actual work.</p>
+    <p>About the consultants I met over the years I am, for the record, positive — not only the freelancers, but the people from Accenture, McKinsey, KPMG and the rest. The same drive, the same problem-solving ability. Only, what applies to government applies to them too: they serve strategic interests, not directly human ones. Though they do it just a little more willingly.</p>
+
+    <h3 class="kop">Education</h3>
+    <p>At Kennisnet — the organisation tasked with moving Dutch schools forward digitally — I worked on media literacy back when the term barely existed, and on gifted education: subjects that remain vulnerable spots in society to this day. Above all I worked there with a team of formidable academics — smart people, a real privilege. At the same time I saw it up close: education lags miles behind digitisation. Not the pupils, though — they had been digital for years while the system was still in a meeting about whether that was allowed.</p>
+
+    <h3 class="kop">Financial services</h3>
+    <p>First at ABN AMRO, then as an independent at nearly every major institution in the country: I watched the shift from hard selling to customer-centred work from the inside. The shift did come — but it came agonisingly slowly. Systems only change when there is genuinely no alternative left.</p>
+    <p>So I bought into A&amp;H Finance — not to go along with the system, but to beat it together with the A&amp;H team. What began as an advisory firm in the Amsterdam region grew — driven by smart IT — into a nationwide business. Mortgages, ground lease, and hundreds of households and entrepreneurs helped through the biggest financial decision of their lives — from first-time buyers and families to expats, right across the country. And you know what the beautiful part was? Most of them could decipher the system perfectly well. They simply wanted a good conversation and someone who picks up the phone. All those individual stories — fantastic.</p>
+    <p>The principle was simple: the client first, the rest follows. And it worked: in those years A&amp;H Finance won five national Independer Awards and became one of the fastest-growing firms in Dutch financial services. For anyone who wants to check: the office still holds a 5.0 on Google today, after hundreds of reviews. When I left in 2025, every colleague got a necktie from me. Anyone who knows me gets the joke.</p>
+
+    <h3 class="kop">Healthcare</h3>
+    <p>My mother developed dementia. She was far too kind, and so she fell completely outside the care institution's field of view. Apparently even as an elderly woman with dementia you are expected to be able to handle the system. Those who don't complain get forgotten — the most painful proof of what happens when a process forgets the human being.</p>
+    <p><em>This experience is where the book</em> <a href="index.html">AI Won't Wipe My Mother's Ass</a> <em>came from.</em></p>
+
+    <h3 class="kop">Politics and governance</h3>
+    <p>From national lobbying to the board of a local association: the same law everywhere. Interests slow change down, and the smaller the playing field, the faster the human being drops out of view.</p>
+
+    <h3 class="kop">Nature</h3>
+    <p>With my canoe business, back in 2000, I bet on nature-friendly recreation — twenty years before the market was ready for it. Sometimes seeing ahead is mostly a long wait.</p>
+
+    <h3 class="kop">Young people</h3>
+    <p>I watched children struggle with the mental pressure of social media, and then a pandemic landed on top of it. A generation that can do anything digitally, but grows up under a magnifying glass we never knew. Here too the system forgets the human being — and this time it's our children.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What I built — and what failed</h2>
+
+    <h3 class="kop">The future of work</h3>
+    <p>As interim director of the Dutch Platform for Independent Entrepreneurs, and then as board director of KIZO — the knowledge institute for independent entrepreneurship — I worked with professors from Nyenrode, Utrecht and elsewhere on the position of the independent professional. Research, opinion pieces, conversations with the City of Amsterdam about its "freelancer fleet", collaborations with universities as far away as Monash in Australia. And the major European study <em>Future Working: The Rise of Europe's Independent Professionals</em> — one warm team of professors, journalists, lobbyists and experts from across Europe, in the heart of Brussels, before Brexit. All of it long before "labour market flexibilisation" became a chapter in every coalition agreement.</p>
+    <p>In 2014 we condensed a year of street-level research among hundreds of freelancers into the booklet <em>De ZZP Maatschappij</em> — "The Freelance Society: too big to ignore". We asked 420 municipalities and every ministry who was responsible for freelance policy. Silence. One large municipality answered, literally: <em>"We know they're out there, but beyond that we'd rather not know too much about it."</em> And to be honest: changing the world from inside a knowledge institute turned out to be harder than I'd thought. Freelancers were consistently traded away for things that politicians in The Hague and Brussels considered more important.</p>
+    <p>Both studies are simply here to read — click the covers:</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:1.5rem;max-width:540px;">
+      <figure>
+        <a href="zzp-maatschappij.pdf" target="_blank" rel="noopener"><img src="cover-zzp-maatschappij.jpg" alt="De ZZP-Maatschappij — Te groot om te negeren (KIZO, 2014)" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);"></a>
+        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">The Freelance Society — too big to ignore (2014, in Dutch)</figcaption>
+      </figure>
+      <figure>
+        <a href="future-working-ipros.pdf" target="_blank" rel="noopener"><img src="cover-future-working.jpg" alt="Future Working: The Rise of Europe's Independent Professionals (EFIP, 2013)" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);"></a>
+        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">Future Working (EFIP, 2013)</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="kop">Thinking along, worldwide</h3>
+    <p>For a few years, when the children were small, I was willing to give up a couple of hours in the evening for it: solving problems on InnoCentive, the global open innovation platform where organisations post their hardest questions. Twice my solution was awarded, both in 2012. The first prize I won with a vision of large-scale collaboration between people and machines — <em>Large-Scale Uses for Human-Machine Teamwork</em> — twelve years before AI made the world discover how current that question would become. The second was about how drivers can safely interact with information systems in the car. InnoCentive gave me the "Multiple Winning Solver" badge for it.</p>
+    <p>And honestly: more often I didn't win. I contributed thinking on better end-of-life conversations in healthcare, European labour market policy, education-to-work transitions and brand strategy — and watched the prize go to someone else. That's how it goes when you take on thousands of engineers and academics with a few evening hours. Taking part sharpened the thinking; winning was the bonus.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1.5rem;">
+      <figure>
+        <img src="certificaat-human-machine.jpg" alt="InnoCentive Certificate of Performance — Large-Scale Uses for Human-Machine Teamwork, Robbert Brantz" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);">
+        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">Human-Machine Teamwork, 2012</figcaption>
+      </figure>
+      <figure>
+        <img src="certificaat-drivers.jpg" alt="InnoCentive Certificate of Performance — Creative Ways for Drivers to Interact with Information Systems, Robbert Brantz" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);">
+        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">Drivers &amp; Information Systems, 2012</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="kop">The music: Carel Kraayenhof</h3>
+    <p>My soul is attached to music, and nowhere did that become more concrete than in the years I worked for Carel Kraayenhof — the bandoneon player the world came to know when he played Máxima to tears at her wedding. It was my quiet dream coming true: to stand closer to the music, to the experience, to that world. My name is in the album credits, and I'm quietly proud of that. Worked hard for it, enjoyed it intensely — that's how work is supposed to feel. That chapter has since closed, but the music stays.</p>
+    <p>I play recorder, piano and guitar myself. Though I have to admit: compared to the fluency of the artists I've met, I am a block of wood. But a block of wood can still enjoy itself. And there is one thing in which I recognise myself completely in those artists: their survival strategy. It's never good enough.</p>
+    <p>And sometimes the worlds came together: at A&amp;H Finance's tenth anniversary, Carel played for our clients and colleagues.</p>
+    <video controls preload="metadata" poster="carel-poster.jpg" style="width:100%;border-radius:0.75rem;margin-top:0.5rem;">
+      <source src="carel-ahfinance-10jaar.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+
+    <h3 class="kop">And beyond that</h3>
+    <p>Zonder Stropdas Company has existed since 2005: concept development and internet projects for artists, financial businesses and social questions. A little book full of ideas for the near future — <em>why not</em> — written on a holiday and sent to the BBC, Wired and Bloomberg. Never got a reply. Why not try anyway — and why not simply read it here: <a href="whynot.pdf">download the booklet (PDF, in Dutch)</a>. And when Bits of Freedom collected questions for Edward Snowden in 2014, I submitted one — and got to put my questions to Snowden myself, live on stage at the Big Brother Awards in the Amsterdam Stadsschouwburg. Just like that, because I asked. See for yourself — the video starts at the conversation:</p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;margin-top:1.5rem;">
+      <iframe src="https://player.vimeo.com/video/115228934#t=20m22s" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:0.75rem;" allowfullscreen loading="lazy" title="Q&amp;A with Edward Snowden — Big Brother Awards X, 2014"></iframe>
+    </div>
+    <p>And the failures belong here just as much: a software company with a product for banks and insurers that never made it to market. Four years of work. It happens. Anyone who experiments for 36 years collects scars — and anyone who hides them is telling you only half the story.</p>
+    <p>But the best thing to see, after all those years: a great many of the projects I was part of still exist — inside nearly all of the organisations I worked for. Not everything you build stays standing. But what stays standing tells you what it was worth.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>What life did</h2>
+    <p class="lead">Not all disruption comes from technology. The biggest ones came from life itself.</p>
+    <p>I lost my family — a brutal break straight through my ordinary life. I lost my sister to cancer. My father was gone from one moment to the next, a heart attack. And my mother slowly disappeared into dementia, inside a care system that mistook her kindness for invisibility.</p>
+    <p>Watching a business fail is a loss unlike any other — if you haven't lived it, you can't feel it. But losing your sister to cancer touches the whole family system, and that is of a different order altogether. And the small losses are suffering too: with my new wife and our dog I learned what it is to lose a dog. Grief has no ranking, only layers.</p>
+    <p>My father was born in the Dutch East Indies. A camp child, as they say here — two words for something there are no words for. He always said: calm can save you. Anyone who knows where those words come from hears them differently. From the Indies culture of care, I absorbed them deeply. Though these days I move on far sooner than I keep flogging a dead horse — calm is not standing still.</p>
+    <p>I had been so dutiful for so long that my own memories had disappeared. They only came back when everything stopped. That sounds heavy, and it was. In those years of loss and stress I could count on little pride or understanding from the people closest to me — not out of unwillingness; it was too much for everyone. And that particular part, looking back now, is fully restored. It led to choices: don't linger, start again, look forward. Time has been allowed to resolve a great deal — not everything, and it doesn't have to.</p>
+    <p>What remained is lighter than you'd expect. My children, first of all — my source of inspiration, in everything. To me they are like leaves on a tree. I'll say no more about them here: they don't like it when I share anything about them, and although I didn't understand that at first — it's their story, not mine.</p>
+    <p>And a woman cut from the same cloth as me — a genuine people person. A cook for people with dementia, a dog groomer, a nordic walking instructor, a kinesiologist, creative — and once a Dutch national junior running champion. You see it in everything she does. With her children, the table filled up again. She radiates pride, even when she has no idea what I'm up to — just like my parents used to. We share everything, and the fact that you sometimes don't understand each other when you think differently is simply logical. And recently there's a new generation as well: I'm a grandfather. Anyone who wants to know why the human being has to stay in the process only has to look at a grandchild.</p>
+    <p>Besides that: long, wandering walks along the Normandy coast with Bluez, our Australian Shepherd — thinking time I hadn't had in years. And the vegetable patch in our own garden — which is wonderful, and you don't get closer to nature than that. A soul, it turns out, attached to what always counted: involvement, nature, music, humanity, sincerity.</p>
+    <img src="bluez.jpg" alt="Bluez on the beach in Normandy at sunset" loading="lazy" style="width:100%;border-radius:0.75rem;margin-top:1.5rem;" onerror="this.style.display='none'">
+    <p style="font-size:0.9rem;color:var(--ink-soft);font-style:italic;margin-top:0.5rem;">Bluez, on the beach at Arromanches. The best thinking space there is.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What changes — and what never does</h2>
+    <p>Work is going through a transition, again. Business process redesign, component-based innovation — everything looks different now that AI is accelerating all of it. I have never seen the world change this fast. I got the warning: go and understand AI. In October 2025 I dived in fully — thoroughly, and I'm glad I did. But let me be honest here too: nobody — myself included — knows exactly where this is heading.</p>
+    <p>And about AI itself, what holds everywhere holds here: <em>if you give peanuts, you get monkeys</em>. With AI too, you still have to think, to check, to tell sense from nonsense — put rubbish in, get rubbish out. Except that the development is moving at a ferocious pace. What still needs supervision today may handle itself tomorrow. And that does tell you something.</p>
+    <p>What I do know for certain, because 36 years showed it to me again and again:</p>
+    <div class="constanten">
+      <div class="constante">
+        <h3>Trust</h3>
+        <p>The only currency that never devalued in 36 years.</p>
+      </div>
+      <div class="constante">
+        <h3>Integrity</h3>
+        <p>Keeping your promises. Old-fashioned, and valuable for exactly that reason.</p>
+      </div>
+      <div class="constante">
+        <h3>Human interaction</h3>
+        <p>Every process that forgets the human being eventually fails. However clever the technology is.</p>
+      </div>
+    </div>
+    <p style="margin-top:2.2rem;">Technology is becoming free. Knowledge is becoming free. But the people who carry the culture of a company, a school or an association — those you cannot download.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Where I stand now</h2>
+    <p>Responsible, energetic, modest and caring — that's how I'm put together. And quickly bored: once I've managed to turn a block of wood into a rough square ball, I lose interest in the sanding. Policy and strategy always suited me better than arguing about rules and regulations. I never believed in networking for the sake of networking. I have nothing but good memories of everyone I worked with, and yet I let everyone go again too. Life may come as it comes.</p>
+    <p>I don't know why, but I always ended up leading — it was simply in me. My place is mostly the strategic level: seeing the whole field, setting the direction. But what I truly love is the proof of concept — the experiment, thinking something up, building it, and seeing whether it lives. Without a necktie I had no patience for fuss, and I generally understood quickly which way things had to go. The greatest compliment I ever received: <em>"Your 80 per cent perfect is my 100 per cent."</em> Though I've also learned that I play chess on a hundred boards at once, and that nobody always follows me because of it. The hard things are easy. The simple things I just don't get.</p>
+    <p>I have no office, no roadmap and no service list with rates. What I do have: an enormous store of knowledge and experience, a head full of ideas, deep immersion in AI since October 2025, and for the first time in years, the time to think. And in the meantime I keep learning — about people, about the technology, about life and about myself.</p>
+    <p>And that AI story isn't theory. I make music with Suno, I build with Claude every day — Anthropic calls me a power user — and this site? I wrote it together with AI, in exactly the way I describe above: the technology does the work, the human decides what it actually says.</p>
+
+    <h3 class="kop">The book</h3>
+    <p>In 2026 I wrote <em>AI Won't Wipe My Mother's Ass — Why care must be at the core of the age of artificial intelligence</em>. Twenty-two short chapters, one argument: care must become a mandatory design requirement of AI. Written in hope, not in fear. Out 1 October 2026, published by Zonder Stropdas Company.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="index.html">Go to the book</a>
+    </div>
+
+    <h3 class="kop" id="experiments" style="scroll-margin-top:5rem;">The experiments of the last six months</h3>
+    <p>Because sitting still isn't an option. Over the past six months I built four proofs of concept — built with AI, each from its own vision. Feel free to click through; there are no secrets:</p>
+    <p><a href="innercalm.html"><em>InnerCalm+</em></a> — an AI buddy for the iPhone. My father's philosophy, passed on digitally: calm can save you. A companion in your pocket for an over-stimulated world. In the App Store, in 175 countries and 5 languages. <a href="innercalm.html" style="white-space:nowrap;">See the vision and how it was built →</a></p>
+    <p><a href="bmgrb.html"><em>BMGRB</em></a> — a website that places the old philosophers in the present context. Because most of what there is to say about human beings has already been said — only the world around us is new. Live in 5 languages, over 400 pages. <a href="bmgrb.html" style="white-space:nowrap;">See the vision and how it was built →</a></p>
+    <p><a href="nomoclub.html"><em>NOMOCLUB Music</em></a> — a music service built around human contact: real people, real stories, turned into real music. Two languages, purely through social media. <a href="nomoclub.html" style="white-space:nowrap;">See the vision and how it was built →</a></p>
+    <p><a href="dogsymmetry.html"><em>Dogsymmetry</em></a> — in the making, with the mission that makes my wife's heart beat hardest: fewer dogs in shelters, by matching people and dogs better up front. Five languages, in the final stretch. <a href="dogsymmetry.html" style="white-space:nowrap;">See the vision and how it was built →</a></p>
+    <p>And the same applies to all of these concepts: the square block of wood has been turned into a rough ball. That's the part I love — imagining, building, proving that it lives. The sanding I gladly leave to whoever gets as excited by it as I do by the beginning.</p>
+    <p>What this becomes, I don't yet know. Perhaps thinking alongside entrepreneurs who feel that AI changes everything but don't want to lose the human being. Perhaps something else entirely. One thing I do know: the pace is so ferocious that the experiments will keep coming — what isn't possible today may well be next month. So this site isn't an end point but a beginning: thinking out loud, in public. Anyone who recognises something in that knows where to find me.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Talk?</h2>
+    <p>Do you recognise something in this story, or are you thinking: I'd like to discuss that? Feel free to write. And if you have an idea of your own and you're looking for someone to think it through with you — from first hunch to proof of concept — you're just as welcome. A good conversation is never wasted time, and it costs nothing either. And if it gets serious after that? Then the arrangements will grow along with it.</p>
+    <p style="margin-top:1.8rem;"><a class="email" href="mailto:robbert@zonderstropdas.com">robbert@zonderstropdas.com</a></p>
+  </div>
+</section>
+
+<footer>
+  zonderstropdas.com — the human being in the process<br>
+  <a href="index.html">The book</a> &middot; <a href="about-nl.html">Over Robbert (NL)</a><br>
+  Zonder Stropdas Company &middot; KvK 27277851
+</footer>
+
+</body>
+</html>

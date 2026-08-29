@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zonder Stropdas — het eerlijke verhaal van Robbert Brantz</title>
-<meta name="description" content="Veertig jaar werk, ondernemen en technologie van dichtbij — van cassettebandje tot AI. Een eerlijk verhaal over wat lukte, wat mislukte, wat het leven deed en wat altijd hetzelfde blijft.">
-<!-- Deelbaar via LinkedIn e.d. -->
-<meta property="og:title" content="Zonder Stropdas — het eerlijke verhaal">
-<meta property="og:description" content="Van handgetypte formulieren tot AI: veertig jaar verandering van dichtbij. Eerlijk verteld — ook wat mislukte en wat het leven deed.">
+<title>AI Won't Wipe My Mother's Ass — a book by Robbert Brantz</title>
+<meta name="description" content="Why care must be at the core of the age of artificial intelligence. A short, personal book by Robbert Brantz. Out 1 October 2026 — pre-order now.">
+<meta name="author" content="Robbert Brantz">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<meta property="og:title" content="AI Won't Wipe My Mother's Ass">
+<meta property="og:description" content="Why care must be at the core of the age of artificial intelligence. A short, personal book by Robbert Brantz. Out 1 October 2026.">
 <meta property="og:url" content="https://zonderstropdas.com">
-<meta property="og:type" content="website">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Zonder Stropdas">
+<meta property="og:locale" content="en_GB">
+<meta property="book:author" content="Robbert Brantz">
+<meta property="book:isbn" content="9789083773605">
+<meta property="book:release_date" content="2026-10-01">
+<meta property="og:image" content="https://zonderstropdas.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Won't Wipe My Mother's Ass by Robbert Brantz — out 1 October 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Won't Wipe My Mother's Ass">
+<meta name="twitter:description" content="Why care must be at the core of the age of artificial intelligence. A book by Robbert Brantz. Out 1 October 2026.">
+<meta name="twitter:image" content="https://zonderstropdas.com/og-image.jpg">
+
+<link rel="canonical" href="https://zonderstropdas.com/">
 <link rel="icon" type="image/png" href="logo.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
 <style>
   :root {
     --bg: #f8fbfc;
@@ -23,291 +42,438 @@
     --line: #dce6ea;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  img { max-width: 100%; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
   body {
     background: var(--bg);
     color: var(--ink);
     font-family: Georgia, 'Times New Roman', serif;
     line-height: 1.8;
     font-size: 1.1rem;
+    -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+  .wrap-wide { max-width: 940px; margin: 0 auto; padding: 0 1.5rem; }
+  a { color: var(--accent-deep); }
+
+  /* Top bar */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(248,251,252,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: 940px; margin: 0 auto; padding: 0.7rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .topbar a { color: var(--ink-soft); text-decoration: none; }
+  .topbar a:hover { color: var(--accent-deep); }
+  .topbar .home { color: var(--accent); letter-spacing: 0.28em; }
+  .topbar nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 
   /* Hero */
-  header {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 5rem 1.5rem 4rem;
+  header.hero {
+    padding: 4rem 1.5rem 3.5rem;
     background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
   }
-  .brand {
+  .hero-grid {
+    max-width: 940px; margin: 0 auto;
+    display: grid; grid-template-columns: minmax(0,300px) minmax(0,1fr);
+    gap: 3rem; align-items: center;
+  }
+  .cover {
+    width: 100%; height: auto; border-radius: 0.4rem; display: block;
+    box-shadow: 0 22px 48px -18px rgba(0,60,80,0.45), 0 2px 6px rgba(0,60,80,0.12);
+  }
+  .cover-fallback {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; aspect-ratio: 1600/2560; padding: 2rem 1.5rem;
+    background: linear-gradient(160deg, #0d5f78, #04384a);
+    color: #eaf5f8; border-radius: 0.4rem;
+    box-shadow: 0 22px 48px -18px rgba(0,60,80,0.45);
+  }
+  .cover-fallback strong { font-size: 1.4rem; font-weight: normal; line-height: 1.35; }
+  .cover-fallback span {
     font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.35em;
-    font-size: 0.8rem;
-    color: var(--accent);
-    margin-bottom: 2rem;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    margin-top: 1.2rem; opacity: 0.75;
+  }
+  .eyebrow {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    text-transform: uppercase; letter-spacing: 0.28em;
+    font-size: 0.72rem; color: var(--accent); margin-bottom: 1.1rem;
   }
   h1 {
-    font-size: clamp(2rem, 5.5vw, 3.2rem);
-    font-weight: normal;
-    line-height: 1.3;
-    max-width: 18em;
-    margin: 0 auto 1.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: normal; line-height: 1.2; margin-bottom: 1rem;
   }
-  h1 em { font-style: italic; color: var(--accent-deep); }
-  .sub {
-    color: var(--ink-soft);
-    font-size: 1.15rem;
-    max-width: 34em;
-    margin: 0 auto;
+  .subtitle {
+    font-style: italic; font-size: 1.2rem; color: var(--accent-deep);
+    line-height: 1.5; margin-bottom: 1.4rem;
   }
-  .scroll-hint { margin-top: 3rem; color: var(--sand); font-size: 1.5rem; }
+  .byline {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 1.6rem;
+  }
+  .hero p.pitch { color: var(--ink-soft); font-size: 1.08rem; }
 
-  /* Secties */
-  section { padding: 4.5rem 0; }
-  section.alt { background: var(--bg-alt); }
-  h2 {
-    font-weight: normal;
-    font-size: 1.7rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent-deep);
+  /* Buttons */
+  .btn-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
+  .btn {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.9rem; letter-spacing: 0.02em; text-decoration: none;
+    padding: 0.75rem 1.4rem; border-radius: 2rem; display: inline-block;
+    border: 1px solid var(--accent-deep); transition: all 0.15s ease;
   }
+  .btn-primary { background: var(--accent-deep); color: #fff; }
+  .btn-primary:hover { background: #005f78; border-color: #005f78; }
+  .btn-ghost { background: transparent; color: var(--accent-deep); }
+  .btn-ghost:hover { background: rgba(0,160,198,0.09); }
+
+  /* Sections */
+  section { padding: 4.5rem 0; scroll-margin-top: 3.2rem; }
+  section.alt { background: var(--bg-alt); }
+  h2 { font-weight: normal; font-size: 1.7rem; margin-bottom: 1.5rem; color: var(--accent-deep); }
   h3.kop {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: var(--accent-deep);
-    margin: 2.2rem 0 0.8rem;
+    font-weight: normal; font-style: italic; font-size: 1.25rem;
+    color: var(--accent-deep); margin: 2.2rem 0 0.8rem;
   }
   p + p { margin-top: 1.2rem; }
   .lead { font-size: 1.25rem; font-style: italic; color: var(--ink-soft); }
-
   blockquote {
     border-left: 3px solid var(--sand);
-    padding: 0.4rem 0 0.4rem 1.4rem;
-    margin: 2.2rem 0;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: var(--accent-deep);
+    padding: 0.4rem 0 0.4rem 1.4rem; margin: 2.2rem 0;
+    font-style: italic; font-size: 1.25rem; color: var(--accent-deep);
   }
 
-  /* Constanten */
-  .constanten {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.2rem;
-    margin-top: 2.2rem;
+  /* Cards */
+  .cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem; margin-top: 2.2rem;
   }
-  .constante {
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 0.75rem;
-    padding: 1.4rem 1.5rem;
+  .card {
+    background: var(--bg); border: 1px solid var(--line);
+    border-radius: 0.75rem; padding: 1.4rem 1.5rem;
   }
-  .constante h3 {
+  section.alt .card { background: #fff; }
+  .card h3 {
     font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--accent); font-weight: 600; margin-bottom: 0.5rem;
   }
-  .constante p { font-size: 1rem; color: var(--ink-soft); }
+  .card p { font-size: 1rem; color: var(--ink-soft); line-height: 1.65; }
 
-  /* Contact */
+  /* Facts table */
+  .facts { margin-top: 2rem; border-top: 1px solid var(--line); }
+  .fact {
+    display: grid; grid-template-columns: 190px 1fr; gap: 1rem;
+    padding: 0.75rem 0; border-bottom: 1px solid var(--line);
+    font-size: 0.98rem;
+  }
+  .fact dt {
+    font-family: ui-sans-serif, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); padding-top: 0.35rem;
+  }
+  .fact dd { color: var(--ink-soft); }
+
+  /* Author */
+  .author-grid {
+    display: grid; grid-template-columns: 150px 1fr; gap: 2rem; align-items: start;
+  }
+  .author-grid img { width: 100%; border-radius: 0.75rem; }
+
   .contact { text-align: center; }
   .contact .email {
-    font-size: 1.25rem;
-    color: var(--accent-deep);
-    text-decoration: none;
-    border-bottom: 1px solid var(--sand);
+    font-size: 1.25rem; color: var(--accent-deep);
+    text-decoration: none; border-bottom: 1px solid var(--sand);
   }
   footer {
-    text-align: center;
-    padding: 2.5rem 1.5rem 3rem;
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    border-top: 1px solid var(--line);
+    text-align: center; padding: 2.5rem 1.5rem 3rem;
+    color: var(--ink-soft); font-size: 0.9rem; border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--ink-soft); }
+
+  @media (max-width: 720px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+    .hero-grid .cover-col { max-width: 240px; margin: 0 auto; }
+    .fact { grid-template-columns: 1fr; gap: 0.1rem; }
+    .author-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+    .author-grid img { max-width: 150px; }
+    section { padding: 3.2rem 0; }
+  }
+
+  @media (max-width: 760px) {
+    .topbar-inner { flex-direction: column; align-items: center; gap: 0.35rem; padding: 0.55rem 1rem; }
+    .topbar .home { font-size: 0.72rem; letter-spacing: 0.2em; }
+    .topbar nav {
+      gap: 0.9rem; font-size: 0.68rem; letter-spacing: 0.1em;
+      flex-wrap: nowrap; overflow-x: auto; max-width: 100%;
+      justify-content: flex-start; padding-bottom: 0.15rem;
+      scrollbar-width: none;
+    }
+    .topbar nav::-webkit-scrollbar { display: none; }
+    .topbar nav a { white-space: nowrap; }
+    .lang { padding-left: 0.9rem; }
+    .bookbar-inner { padding: 0.7rem 1rem; font-size: 0.86rem; }
+    html { scroll-padding-top: 6.5rem; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://zonderstropdas.com/#website",
+      "url": "https://zonderstropdas.com/",
+      "name": "Zonder Stropdas",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://zonderstropdas.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://zonderstropdas.com/#organization",
+      "name": "Zonder Stropdas Company",
+      "url": "https://zonderstropdas.com/",
+      "logo": "https://zonderstropdas.com/logo.png",
+      "email": "robbert@zonderstropdas.com",
+      "founder": {
+        "@id": "https://zonderstropdas.com/#robbert"
+      },
+      "identifier": "KvK 27277851"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://zonderstropdas.com/#robbert",
+      "name": "Robbert Brantz",
+      "url": "https://zonderstropdas.com/about.html",
+      "email": "robbert@zonderstropdas.com",
+      "jobTitle": "Author, independent entrepreneur and concept developer",
+      "nationality": "NL",
+      "description": "Author of AI Won't Wipe My Mother's Ass. Thirty-six years in work, business and technology — banking, education, financial services — writing and building around one idea: the human being in the process.",
+      "worksFor": {
+        "@id": "https://zonderstropdas.com/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/robbert-brantz-6021399/"
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://zonderstropdas.com/#book",
+      "name": "AI Won't Wipe My Mother's Ass",
+      "alternativeHeadline": "Why care must be at the core of the age of artificial intelligence",
+      "url": "https://zonderstropdas.com/",
+      "image": [
+        "https://zonderstropdas.com/cover-ai-wont-wipe.jpg",
+        "https://zonderstropdas.com/og-image.jpg"
+      ],
+      "author": {
+        "@id": "https://zonderstropdas.com/#robbert"
+      },
+      "publisher": {
+        "@id": "https://zonderstropdas.com/#organization"
+      },
+      "inLanguage": "en",
+      "bookFormat": "https://schema.org/EBook",
+      "isbn": "9789083773605",
+      "numberOfPages": 50,
+      "datePublished": "2026-10-01",
+      "genre": [
+        "Technology and society",
+        "Artificial intelligence",
+        "Essay"
+      ],
+      "keywords": "artificial intelligence, care, automation, technology and society, human-centred design, dementia, healthcare, customer service",
+      "about": "Why care must become a mandatory design requirement of artificial intelligence.",
+      "description": "A short, personal book arguing that care must become a mandatory design requirement of artificial intelligence. Twenty-two chapters on what happens when automation — in healthcare, banking, customer service, government and retail — forgets the human being. Written in hope, not in fear.",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://zonderstropdas.com/#get",
+        "price": "8.99",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/PreOrder",
+        "availabilityStarts": "2026-10-01",
+        "seller": {
+          "@id": "https://zonderstropdas.com/#organization"
+        }
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://zonderstropdas.com/#webpage",
+      "url": "https://zonderstropdas.com/",
+      "name": "AI Won't Wipe My Mother's Ass — a book by Robbert Brantz",
+      "isPartOf": {
+        "@id": "https://zonderstropdas.com/#website"
+      },
+      "about": {
+        "@id": "https://zonderstropdas.com/#book"
+      },
+      "primaryImageOfPage": "https://zonderstropdas.com/cover-ai-wont-wipe.jpg",
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Zonder Stropdas logo — een hand die de stropdas loslaat" style="width:230px;max-width:60vw;margin:0 auto 1.2rem;display:block;mix-blend-mode:multiply;">
-  <div class="brand">zonderstropdas.com</div>
-  <h1>Ik ben Robbert Brantz.<br><em>Gestudeerd heb ik nooit, geleerd des te meer.</em></h1>
-  <p class="sub">Dit is geen bedrijf en geen pitch. Het is een eerlijk verhaal — over wat lukte, wat mislukte, wat het leven onderweg deed, en over de ene constante in al die jaren: de mens in het proces. Waar het naartoe gaat weet ik zelf nog niet precies. Dat is geen zwakte, dat is het eerlijke antwoord.</p>
-  <div class="scroll-hint">⌄</div>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="home" href="index.html">zonderstropdas.com</a>
+    <nav>
+      <a href="#book">The book</a>
+      <a href="#get">Get the book</a>
+      <a href="about.html">About Robbert</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-grid">
+    <div class="cover-col">
+      <!-- Add the front cover to the repository as cover-ai-wont-wipe.jpg (1600x2560).
+           Until it is there, the styled placeholder below is shown instead. -->
+      <img class="cover" src="cover-ai-wont-wipe.jpg" width="1000" height="1600" fetchpriority="high"
+           alt="Cover of AI Won't Wipe My Mother's Ass by Robbert Brantz — the author's mother in a wheelchair, wearing sunglasses and making a peace sign"
+           onerror="this.style.display='none';document.getElementById('coverFallback').style.display='flex';">
+      <div class="cover-fallback" id="coverFallback" style="display:none;">
+        <strong>AI Won't Wipe My Mother's Ass</strong>
+        <span>Robbert Brantz</span>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">New book &middot; Out 1 October 2026</div>
+      <h1>AI Won't Wipe My&nbsp;Mother's&nbsp;Ass</h1>
+      <p class="subtitle">Why care must be at the core of the age of artificial intelligence</p>
+      <div class="byline">Robbert Brantz</div>
+      <p class="pitch">A sharp, personal and deeply humane case for putting care — not productivity — at the starting point of the AI age. Twenty-two short chapters on what happens to care when everything around us is automated. Written in hope, not in fear.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#get">Get the book</a>
+        <a class="btn btn-ghost" href="#book">What it's about</a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<section id="verhaal">
+<section id="book">
   <div class="wrap">
-    <h2>Hoe het begon</h2>
-    <p class="lead">Als kind nam ik computerspelletjes op via de radio. De code werd uitgezonden, ik zat klaar met mijn cassettebandje — om vervolgens in die code mezelf op nummer 1 van het spelletje te zetten.</p>
-    <p>Mijn ouders waren altijd trots op me, ook al begrepen ze niet precies wat ik deed. En het gekke was: schreef ik op school een lullig gedichtje, dan zat ik ineens tussen de regionale prijswinnaars. In mijn werk ging het later net zo — ik rolde van prijs naar prijs, niet omdat ik er mijn best voor deed. Het ging gewoon zo.</p>
-    <p>Op mijn vijftiende was ik het programmeren zat en ging ik gitaar spelen in een bandje — en nam ik al snel het voortouw in commissies en besturen. Op mijn achttiende ging ik weer programmeren. De twee sporen die mijn hele leven zouden blijven: de techniek en de mensen.</p>
-    <p>Ik was altijd aan het werk; de groentewinkel en de sportclub waren mijn sociale leven. Mijn eerste echte baan: formulieren invullen met de hand en met de typmachine, papiertjes die iedere dag werden opgehaald en later gecontroleerd als ze verwerkt waren. Ik bestelde eten via James, de allereerste telesuper, en kleren via een klein modem — in een tijd waarin The Police, Dire Straits en U2 nog optraden in sporthallen om de hoek.</p>
-    <p>ABN AMRO werd mijn leerschool. Daar zag ik van binnenuit hoe een grote organisatie werkt — en hoe de digitalisering golf na golf door de bank rolde. Daarna koos ik voor het ondernemerschap, en als zelfstandige werkte ik in de loop der jaren voor vrijwel alle grote financiële instellingen van Nederland. Altijd zonder stropdas, altijd op het snijvlak van proces, techniek en mens.</p>
-    <p>Toen versnelde de wereld. Er kwamen interfaces, het formuliertje hoefde niet meer getypt. Eigen websites met formulieren die in je mail vielen. Een cd-rom uit de winkel waarmee je een eigen webwinkel bouwde — en weer verbouwde naar je eigen propositie. De webwinkel ging praten met CRM-pakketten, er kwamen termen als SOAP en API. En ik leerde gewoon mee: van BASIC van het cassettebandje, via PHP voor het web en C++, naar de cloud — en nu Claude. Programmeren veranderde van regels tikken, in bouwstenen verbinden, in gewoon zeggen wat je bedoelt. En zo is er nu AI.</p>
-    <p>Wat vroeger miljoenen kostte aan projectontwikkeling — de mensen die je nodig had om iets te produceren — kan nu soms zelfs gratis. Ineens bouw je apps, heb je zelfschrijvende websites en pomp je in een uurtje een pophit uit je computer.</p>
-    <blockquote>Terwijl de boom in de tuin nog steeds gesnoeid moet worden.</blockquote>
-  </div>
-</section>
+    <h2>What this book is about</h2>
+    <blockquote>What is all our technology for if it leaves us with less time to be human?</blockquote>
+    <p>In this sharp, personal, and deeply humane book, Robbert Brantz argues that care — not productivity — should be the starting point of the AI age.</p>
+    <p>From children and ageing parents to business, government, nature, and the design of daily life, he asks one simple question: what happens to care?</p>
+    <p>AI can do extraordinary things. But can it help us build a life with more time, attention, dignity, and presence?</p>
+    <p>Provocative, accessible, and deeply personal, this book challenges developers, politicians, and all of us to design a future that keeps humanity at the centre.</p>
 
-<section class="alt">
-  <div class="wrap">
-    <h2>Wat ik onderweg zag</h2>
-    <p>Ik heb banen zien verdwijnen en nieuwe zien ontstaan. Het belangrijkste wat ik leerde: hoe groot de onderneming ook is, er is altijd een harde kern in teams die het bedrijf en de cultuur vormgeeft. Die kern bepaalt of verandering lukt — niet de technologie. En wat veel mensen niet beseffen: het team is niet de manager. Het zijn de mensen zonder stropdas die al het uitvoerende werk doen.</p>
-    <p>Over de consultants die ik door de jaren heen ontmoette ben ik overigens positief — niet alleen de zzp'ers, ook de mensen van Accenture, McKinsey, KPMG en consorten. Dezelfde drive, hetzelfde oplossend vermogen. Alleen geldt voor hen wat ook voor de overheid geldt: ze dienen de strategische belangen, niet direct de menselijke. Al doen zij het dan nét iets liever.</p>
+    <h3 class="kop">Where it came from</h3>
+    <p>For 36 years I watched organisations digitise from the inside — a bank, a knowledge institute for education, financial services, healthcare, boardrooms and street level. The technology always changed. The pattern never did. Somewhere between the strategy deck and the person at the counter, the human being falls out of the process. Nobody decides it. It just happens, one efficiency at a time.</p>
+    <p>Then it happened to my own mother. She had dementia, she was far too kind to complain — and so, to a system built around signals and complaints, she effectively did not exist. That is not only a healthcare story. It is the same story as the bank that closed its branches, the customer service line that no longer has a line, the government desk that became a portal, the shop that became a screen. Care disappears first, and only much later do we notice what it was holding up.</p>
+    <p>So the book makes one argument, plainly: care must become a design requirement of artificial intelligence — not an ethics chapter at the back, not a compliance checkbox, but a requirement in the brief, the same way security and performance are. It is short on purpose: twenty-two chapters, around fifty pages, written to be read in one sitting and argued with afterwards. Written in hope, not in fear.</p>
 
-    <h3 class="kop">Het onderwijs</h3>
-    <p>Bij Kennisnet — de organisatie die scholen digitaal vooruit moest helpen — werkte ik aan mediawijsheid, toen dat woord nog niet eens een begrip was, en aan hoogbegaafdheid: onderwerpen die tot op de dag van vandaag kwetsbare plekken in de maatschappij zijn. En bovenal werkte ik er met een team van superacademici — slimme mensen, heel gaaf. Tegelijk zag ik van dichtbij: het onderwijs loopt mijlenver achter op de digitalisering. De leerlingen niet — die waren allang digitaal terwijl het systeem nog vergaderde over de vraag of dat wel mocht.</p>
+    <h3 class="kop">Why a father wrote this</h3>
+    <p>I am a father, and recently I became a grandfather. That changes the unit you count in. You stop counting in quarters and start counting in generations — and once you do, 36 years of digitisation looks different.</p>
+    <p>In those 36 years I watched handwritten forms become typed forms, typed forms become websites, websites become apps, and apps become systems that now write themselves. Every single step made something faster. Almost none of them made anything more caring. And because nobody ever decided that out loud, nobody noticed it was happening.</p>
+    <p>You feel it at both ends of a family at once. My children grew up inside portals, helpdesks that answer with a menu, and queues that no longer have a queue. My parents grew old inside that same machinery — and my mother, who never complained, disappeared into it completely. Same system, one generation apart, and the same thing missing from it.</p>
+    <blockquote>In all those years of building things that go faster, the one thing we forgot to build in was care.</blockquote>
+    <p>That is the sentence this whole book hangs on. Not because technology is the enemy — I build with it every day and I am glad it exists. But because the next thing we are automating is the part where one human being pays attention to another. My children will live inside whatever we decide about that now. So will their children. That is not a policy question. It is a family one.</p>
 
-    <h3 class="kop">De financiële dienstverlening</h3>
-    <p>Eerst bij ABN AMRO, daarna als zelfstandige bij vrijwel alle grote instellingen van het land: ik zag de omslag van brute verkoop naar klantgericht werken van binnenuit. De omslag kwam er — maar het ging tergend langzaam. Systemen veranderen pas als het echt niet anders meer kan.</p>
-    <p>Dus kocht ik me in bij A&amp;H Finance — niet om mee te draaien, maar om samen met het team van A&amp;H dat systeem te verslaan. Wat begon als een advieskantoor in de regio Amsterdam groeide — gedreven door slimme IT — uit tot een landelijk werkend bedrijf. Hypotheken, erfpacht, en honderden huishoudens en ondernemers geholpen bij de grootste financiële beslissing van hun leven — van starters en gezinnen tot expats, door het hele land. En weet je wat het mooie was? De meesten konden het systeem heus wel ontcijferen. Ze wilden gewoon een goed gesprek en iemand die bereikbaar is. Fantastisch, al die individuele verhalen.</p>
-    <p>Het devies was simpel: de klant eerst, de rest volgt. En het werkte: in die jaren won A&amp;H Finance vijf landelijke Independer Awards en groeide het uit tot een van de snelste groeiers in de financiële dienstverlening. Wie het wil nazoeken: het kantoor staat vandaag nog altijd op een 5.0 op Google, na honderden beoordelingen. Bij mijn afscheid in 2025 kreeg iedere collega van mij een stropdas. Wie mij kent, snapt de knipoog.</p>
+    <figure style="margin-top:2.5rem;">
+      <img src="cover-ai-wont-wipe-back.jpg" width="1000" height="1600"
+           alt="Back cover of AI Won't Wipe My Mother's Ass: the author's mother in a sun hat, seated outdoors among trees, beside the book's summary text"
+           loading="lazy"
+           style="width:100%;height:auto;max-width:320px;display:block;border-radius:0.4rem;box-shadow:0 18px 40px -18px rgba(0,60,80,0.45);">
+      <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.6rem;">The back cover.</figcaption>
+    </figure>
 
-    <h3 class="kop">De zorg</h3>
-    <p>Mijn moeder werd dement. Ze was veel te aardig, en dus viel ze volledig buiten het gezichtsveld van de zorginstelling. Zelfs als demente bejaarde moet je blijkbaar het systeem aankunnen. Wie niet piept, wordt vergeten — het pijnlijkste bewijs van wat er gebeurt als een proces de mens vergeet.</p>
-
-    <h3 class="kop">Politiek en bestuur</h3>
-    <p>Van de landelijke lobby tot het verenigingsbestuur: overal dezelfde wet. Belangen vertragen verandering, en hoe kleiner het speelveld, hoe sneller de mens uit beeld raakt.</p>
-
-    <h3 class="kop">De natuur</h3>
-    <p>Met mijn kanobedrijf zette ik in 2000 in op natuurvriendelijk recreëren — twintig jaar voordat de markt er klaar voor was. Soms is vooruitzien vooral lang wachten.</p>
-
-    <h3 class="kop">De jeugd</h3>
-    <p>Ik zag kinderen worstelen met de mentale druk van social media, en daar kwam een coronacrisis overheen. Een generatie die digitaal alles kan, maar onder een vergrootglas opgroeit dat wij nooit gekend hebben. Ook hier vergeet het systeem de mens — en dit keer zijn het onze kinderen.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Wat ik bouwde — en wat mislukte</h2>
-
-    <h3 class="kop">De toekomst van werk</h3>
-    <p>Als interim-directeur van Platform Zelfstandige Ondernemers, daarna als directeur-bestuurslid van KIZO — het Kennisinstituut Zelfstandig Ondernemerschap — werkte ik samen met hoogleraren van onder andere Nyenrode en Utrecht aan de positie van de zelfstandige professional. Onderzoek, opiniestukken, gesprekken met de gemeente Amsterdam over de "ZZP Vloot", samenwerking met universiteiten tot aan Monash in Australië. En het grote Europese onderzoek <em>Future Working: The Rise of Europe's Independent Professionals</em> — één warm team van hoogleraren, journalisten, lobbyisten en experts uit de Europese landen, in het hart van Brussel, vóór de Brexit. En dat alles lang voordat "de flexibilisering van arbeid" een hoofdstuk in ieder regeerakkoord werd.</p>
-    <p>In 2014 bundelden we een jaar straatonderzoek onder honderden zzp'ers in het boekje <em>De ZZP Maatschappij — te groot om te negeren</em>. We vroegen 420 gemeenten en alle ministeries wie er verantwoordelijk was voor zzp-beleid. Het bleef stil. Eén grote gemeente antwoordde letterlijk: <em>"We weten dat ze er zijn, maar verder willen we er liever niet te veel over weten."</em> Eerlijk is ook: de wereld veranderen vanuit een kennisinstituut bleek taaier dan gedacht. De zzp'ers werden consequent uitgeruild tegen zaken die de politiek in Den Haag en Brussel belangrijker vond.</p>
-    <p>De onderzoeken zijn hier gewoon te lezen — klik op de covers:</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:1.5rem;max-width:540px;">
-      <figure>
-        <a href="zzp-maatschappij.pdf" target="_blank" rel="noopener"><img src="cover-zzp-maatschappij.jpg" alt="De ZZP-Maatschappij — Te groot om te negeren (KIZO, 2014)" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);"></a>
-        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">De ZZP-Maatschappij — te groot om te negeren (2014)</figcaption>
-      </figure>
-      <figure>
-        <a href="future-working-ipros.pdf" target="_blank" rel="noopener"><img src="cover-future-working.jpg" alt="Future Working: The Rise of Europe's Independent Professionals (EFIP, 2013)" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);"></a>
-        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">Future Working (EFIP, 2013)</figcaption>
-      </figure>
-    </div>
-
-    <h3 class="kop">Wereldwijd meedenken</h3>
-    <p>Een paar jaar lang, toen de kinderen klein waren, had ik er 's avonds een paar uurtjes voor over: vraagstukken oplossen via InnoCentive, het wereldwijde open-innovatieplatform waar organisaties hun moeilijkste vragen uitzetten. Twee keer werd mijn oplossing bekroond, allebei in 2012. De eerste prijs won ik met een visie op grootschalige samenwerking tussen mens en machine — <em>Large-Scale Uses for Human-Machine Teamwork</em> — twaalf jaar voordat de wereld door AI ontdekte hoe actueel die vraag zou worden. De tweede ging over hoe bestuurders veilig omgaan met informatiesystemen in de auto. InnoCentive gaf me er de badge "Multiple Winning Solver" voor.</p>
-    <p>En eerlijk: vaker won ik niet. Ik dacht mee over betere gesprekken over het levenseinde in de zorg, Europees arbeidsmarktbeleid, onderwijs-naar-werk en merkstrategie — en zag de prijs naar anderen gaan. Zo werkt het als je het met een paar avonduurtjes opneemt tegen duizenden ingenieurs en academici. Meedoen scherpte het denken, winnen was de bonus.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1.5rem;">
-      <figure>
-        <img src="certificaat-human-machine.jpg" alt="InnoCentive Certificate of Performance — Large-Scale Uses for Human-Machine Teamwork, Robbert Brantz" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);">
-        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">Human-Machine Teamwork, 2012</figcaption>
-      </figure>
-      <figure>
-        <img src="certificaat-drivers.jpg" alt="InnoCentive Certificate of Performance — Creative Ways for Drivers to Interact with Information Systems, Robbert Brantz" loading="lazy" style="width:100%;border-radius:0.5rem;border:1px solid var(--line);">
-        <figcaption style="font-size:0.85rem;color:var(--ink-soft);font-style:italic;margin-top:0.4rem;">Drivers &amp; Information Systems, 2012</figcaption>
-      </figure>
-    </div>
-
-    <h3 class="kop">De muziek: Carel Kraayenhof</h3>
-    <p>Mijn ziel zit aan muziek vast, en nergens werd dat concreter dan in de jaren dat ik werkte voor Carel Kraayenhof — de bandoneonist die de wereld leerde kennen toen hij Máxima bij het ja-woord tot tranen speelde. Het was mijn stille droom die uitkwam: dichter bij de muziek staan, bij de belevenissen, bij die wereld. Mijn naam staat in de cd's, en daar ben ik stilletjes trots op. Hard voor gewerkt, intens van genoten — zo hoort werk te voelen. Inmiddels is dat hoofdstuk afgerond, maar de muziek blijft.</p>
-    <p>Zelf speel ik blokfluit, piano en gitaar. Al moet ik bekennen: vergeleken met de souplesse van de artiesten die ik heb ontmoet, ben ik een blok hout. Maar ook een blok hout kan genieten. En in één ding herken ik me wél volledig in die artiesten: hun overlevingsstrategie. Het is nooit perfect genoeg.</p>
-    <p>En soms kwamen de werelden samen: bij het tienjarig jubileum van A&amp;H Finance speelde Carel voor onze klanten en collega's.</p>
-    <video controls preload="metadata" poster="carel-poster.jpg" style="width:100%;border-radius:0.75rem;margin-top:0.5rem;">
-      <source src="carel-ahfinance-10jaar.mp4" type="video/mp4">
-      Je browser ondersteunt geen video.
-    </video>
-
-    <h3 class="kop">En verder</h3>
-    <p>Zonder Stropdas Company bestaat al sinds 2005: conceptontwikkeling en internetprojecten voor artiesten, financiële ondernemingen en maatschappelijke vraagstukken. Een boekje vol ideeën voor de nabije toekomst — <em>why not</em> — geschreven in een vakantie, opgestuurd naar de BBC, Wired en Bloomberg. Nooit antwoord gekregen. Waarom niet toch geprobeerd — en waarom niet gewoon hier te lezen: <a href="whynot.pdf" style="color:var(--accent-deep);">download het boekje (pdf)</a>. En toen Bits of Freedom in 2014 vragen verzamelde voor Edward Snowden, stuurde ik er een in — en mocht ik mijn vragen zélf aan Snowden stellen, live in de Stadsschouwburg bij de Big Brother Awards. Zomaar, omdat ik ze stelde. Kijk zelf maar — de video start bij het gesprek:</p>
-    <div style="position:relative;padding-bottom:56.25%;height:0;margin-top:1.5rem;">
-      <iframe src="https://player.vimeo.com/video/115228934#t=20m22s" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:0.75rem;" allowfullscreen loading="lazy" title="Q&amp;A met Edward Snowden — Big Brother Awards X, 2014"></iframe>
-    </div>
-    <p>En de mislukkingen horen er net zo bij: een softwarebedrijf met een product voor banken en verzekeraars dat de markt niet haalde. Vier jaar werk. Het gebeurt. Wie veertig jaar experimenteert, verzamelt littekens — wie ze verzwijgt, vertelt maar het halve verhaal.</p>
-    <p>Maar het mooiste om te zien, na al die jaren: heel veel van de projecten waar ik onderdeel van was, bestaan nog steeds — binnen vrijwel alle organisaties waar ik voor werkte. Niet alles wat je bouwt blijft staan. Maar wat blijft staan, vertelt wat het waard was.</p>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <h2>Wat het leven deed</h2>
-    <p class="lead">Niet alle disrupties komen uit de technologie. De grootste kwamen uit het leven zelf.</p>
-    <p>Ik verloor mijn gezin — een brute breuk dwars door mijn normale leven. Ik verloor mijn zus aan kanker. Mijn vader was er van het ene op het andere moment niet meer, een hartaanval. En mijn moeder verdween langzaam in dementie, in een zorgsysteem dat haar vriendelijkheid verwarde met onzichtbaarheid.</p>
-    <p>Een onderneming zien falen is een verlies dat ongekend is — wie het niet heeft meegemaakt, kan het niet navoelen. Maar je zus verliezen aan kanker raakt het hele familiesysteem, en dat is van een andere orde. En ook het kleine verlies is lijden: met mijn nieuwe vrouw en hond maakte ik mee wat het is om een hond te verliezen. Verdriet kent geen rangorde, alleen lagen.</p>
-    <p>Mijn vader werd geboren in Nederlands-Indië. Een kampkind, zoals ze dat hier zeggen — twee woorden voor iets waar geen woorden voor zijn. Hij zei altijd: kalmte kan je redden. Wie weet waar die woorden vandaan komen, hoort ze anders. Uit de Indische cultuur van zorg heb ik ze diep meegekregen. Al schakel ik tegenwoordig veel eerder door dan dat ik aan een dood paard blijf trekken — kalmte is geen stilstand.</p>
-    <p>Ik was altijd zo dienstbaar dat mijn eigen herinneringen verdwenen waren. Ze kwamen pas terug toen alles stilstond. Dat klinkt zwaar, en dat was het ook. In die jaren van verlies en stress kon ik op weinig trots of begrip van mijn naasten rekenen — niet uit onwil, het was voor iedereen te veel. En juist dat stuk is, als ik nu terugkijk, weer helemaal terug. Het leidde tot keuzes: niet blijven hangen, opnieuw beginnen, vooruitkijken. De tijd heeft veel mogen oplossen — niet alles, dat hoeft ook niet.</p>
-    <p>Wat overbleef is lichter dan je zou denken. Mijn kinderen, voorop — mijn bron van inspiratie, in alles. Ze zijn voor mij als blaadjes aan een boom. Meer zeg ik hier niet over hen: ze vinden het maar niets als ik iets over ze deel, en al snapte ik daar in het begin niets van — het is hun verhaal, niet het mijne.</p>
-    <p>En een vrouw die uit hetzelfde hout gesneden is als ik — een echt mensen-mens. Kok voor mensen met dementie, hondentrimster, nordic walking-cursusleider, kinesioloog, creatief — en ooit Nederlands jeugdkampioen hardlopen. Dat zie je in alles terug. Met haar kinderen werd de tafel weer voller. Ze straalt trots uit, ook als ze er soms niets van snapt wat ik allemaal doe — net als mijn ouders vroeger. We delen alles, en dat je elkaar soms niet begrijpt als je anders denkt, is alleen maar logisch. Sinds kort is er bovendien een nieuwe generatie: ik ben opa. Wie wil weten waarom de mens in het proces moet blijven staan, hoeft maar naar een kleinkind te kijken.</p>
-    <p>Daarnaast: lange dwaaltochten langs de Normandische kust met Bluez, onze Australian Shepherd — denktijd die er jarenlang niet was geweest. En de moestuin in de eigen tuin — wat heerlijk is, en dichter bij de natuur kom je niet. Een ziel die verbonden blijkt aan wat altijd al telde: betrokkenheid, natuur, muziek, menselijkheid, oprechtheid.</p>
-    <img src="bluez.jpg" alt="Bluez op het strand van Normandië bij zonsondergang" loading="lazy" style="width:100%;border-radius:0.75rem;margin-top:1.5rem;" onerror="this.style.display='none'">
-    <p style="font-size:0.9rem;color:var(--ink-soft);font-style:italic;margin-top:0.5rem;">Bluez, op het strand bij Arromanches. De beste denkruimte die er bestaat.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Wat verandert — en wat nooit verandert</h2>
-    <p>Arbeid maakt een transitie door, opnieuw. Business process redesign, component based innovation — alles staat in een nieuw licht nu AI alles versnelt. Ik heb nog nooit meegemaakt dat de wereld zó snel verandert. Ik kreeg de waarschuwing: verdiep je in AI. In oktober 2025 ben ik er vol ingedoken — grondig, en ik ben blij dat ik het deed. Maar laat ik ook hier eerlijk zijn: niemand — ik ook niet — weet precies waar dit heengaat.</p>
-    <p>En over AI zelf geldt wat overal geldt: <em>if you give peanuts, you get monkeys</em>. Ook met AI blijft het denken, controleren, en de zin van de onzin onderscheiden — wie er rommel in stopt, krijgt rommel terug. Alleen: de ontwikkeling gaat razendsnel. Wat vandaag nog controle vraagt, kan het morgen zelf. En dát voorspelt wat.</p>
-    <p>Wat ik wél zeker weet, omdat veertig jaar het me telkens opnieuw liet zien:</p>
-    <div class="constanten">
-      <div class="constante">
-        <h3>Vertrouwen</h3>
-        <p>De enige valuta die in veertig jaar nooit is gedevalueerd.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Not an AI book</h3>
+        <p>It is a book about automation everywhere — banks, customer service, government desks, retail, schools. AI is only the fastest chapter of a much older story.</p>
       </div>
-      <div class="constante">
-        <h3>Integriteit</h3>
-        <p>Afspraken nakomen. Ouderwets, en precies daarom waardevol.</p>
+      <div class="card">
+        <h3>Hope, not fear</h3>
+        <p>No doom, no hype. The technology is extraordinary. The question is whose interests are designed into it before it scales.</p>
       </div>
-      <div class="constante">
-        <h3>Menselijke interactie</h3>
-        <p>Elk proces dat de mens vergeet, faalt uiteindelijk. Hoe slim de techniek ook is.</p>
+      <div class="card">
+        <h3>One concrete demand</h3>
+        <p>Make care a design requirement. Everything else in the book follows from that single, testable idea.</p>
       </div>
     </div>
-    <p style="margin-top:2.2rem;">Technologie wordt gratis. Kennis wordt gratis. Maar de mensen die de cultuur van een bedrijf, een school of een vereniging dragen — die kun je niet downloaden.</p>
   </div>
 </section>
 
-<section class="alt">
+<section class="alt" id="get">
   <div class="wrap">
-    <h2>Waar ik nu sta</h2>
-    <p>Verantwoordelijk, energiek, bescheiden en zorgzaam — dat is hoe ik in elkaar zit. En snel verveeld: als ik van een blok hout een ruwe vierkante bol heb weten te maken, ga ik me vervelen bij het gladstrijken. Beleid en strategie lagen me daarom altijd beter dan discussiëren over wet- en regelgeving. Ik heb nooit geloofd in netwerken om het netwerken. Aan iedereen met wie ik samenwerkte bewaar ik alleen maar goede herinneringen, en toch heb ik iedereen ook weer losgelaten. Het leven mag komen zoals het komt.</p>
-    <p>Ik weet niet waarom, maar ik nam altijd de leiding — het zat gewoon in me. Mijn plek is vooral het strategische niveau: het speelveld overzien, de richting bepalen. Maar waar ik écht van hou is de proof of concept — het experiment, iets bedenken, bouwen en kijken of het leeft. Zonder stropdas had ik geen zin in gezeur en begreep ik al snel welke kant het op moest. Het grootste compliment dat ik ooit kreeg: <em>"Jouw 80% perfect is voor mij 100%."</em> Al heb ik ook geleerd dat ik op honderd borden tegelijk schaak, en dat daardoor niemand mij altijd begrijpt. De moeilijke dingen zijn makkelijk. De simpele dingen begrijp ik gewoon niet.</p>
-    <p>Ik heb geen kantoor, geen stappenplan en geen dienstenlijst met tarieven. Wat ik wel heb: een enorme bak kennis en ervaring, een hoofd vol ideeën, sinds oktober 2025 diep in AI, en voor het eerst in jaren de tijd om na te denken. En ondertussen blijf ik leren — over de mens, over de technologische ontwikkelingen, over het leven en over mezelf.</p>
-    <p>En dat AI-verhaal is geen theorie. Ik maak muziek met Suno, bouw dagelijks met Claude — Anthropic noemt me een power user — en deze site? Die schreef ik samen met AI, op precies de manier waarover ik het hierboven heb: de techniek doet het werk, de mens bepaalt wat er echt staat.</p>
-    <h3 class="kop" id="experimenten">De experimenten van de laatste zes maanden</h3>
-    <p>Want stilzitten zit er niet in. De afgelopen zes maanden bouwde ik vier proof of concepts — met AI gebouwd, elk vanuit een eigen visie. Klik gerust door op de projecten; er zijn geen geheimen:</p>
-    <p><a href="innercalm.html" style="color:var(--accent-deep);"><em>InnerCalm+</em></a> — een AI-buddy voor de iPhone. De filosofie van mijn vader, digitaal doorgegeven: kalmte kan je redden. Een maatje in je broekzak voor een overprikkelde wereld. In de App Store, in 175 landen en 5 talen. <a href="innercalm.html" style="color:var(--accent-deep);white-space:nowrap;">Bekijk de visie en hoe het gebouwd is →</a></p>
-    <p><a href="bmgrb.html" style="color:var(--accent-deep);"><em>BMGRB</em></a> — een website die de oude filosofen in de huidige context zet. Want over de mens is het meeste allang gezegd — alleen de wereld eromheen is nieuw. Live in 5 talen, ruim 400 pagina's. <a href="bmgrb.html" style="color:var(--accent-deep);white-space:nowrap;">Bekijk de visie en hoe het gebouwd is →</a></p>
-    <p><a href="nomoclub.html" style="color:var(--accent-deep);"><em>NOMOCLUB Music</em></a> — een muziekdienst rond het contact met de mens: echte mensen, echte verhalen, omgezet in echte muziek. Twee talen, puur via social media. <a href="nomoclub.html" style="color:var(--accent-deep);white-space:nowrap;">Bekijk de visie en hoe het gebouwd is →</a></p>
-    <p><a href="dogsymmetry.html" style="color:var(--accent-deep);"><em>Dogsymmetry</em></a> — in de maak, met de missie waar het hart van mijn vrouw het hardst van gaat kloppen: minder hondjes in het asiel, door mens en hond vooraf beter te matchen. Vijf talen, in afbouw. <a href="dogsymmetry.html" style="color:var(--accent-deep);white-space:nowrap;">Bekijk de visie en hoe het gebouwd is →</a></p>
-    <p>En voor al deze concepten geldt hetzelfde: het vierkante blok hout is getransformeerd tot een ruwe bal. Dat is het deel waar ik van hou — bedenken, bouwen, bewijzen dat het leeft. Het gladstrijken gun ik graag aan wie er net zo enthousiast van wordt als ik van het begin.</p>
-    <p>Wat dit wordt, weet ik nog niet. Misschien meedenken met ondernemers die voelen dat AI alles verandert maar de mens niet kwijt willen. Misschien iets heel anders. Eén ding weet ik wél: de ontwikkeling gaat zó razendsnel dat de experimenten zullen blijven komen — wat vandaag nog niet kan, kan volgende maand misschien wel. Deze site is dus geen eindpunt maar een begin: hardop denken, in de openbaarheid. Wie daar iets in herkent, weet me te vinden.</p>
+    <h2>Get the book</h2>
+    <p>The ebook is published by Zonder Stropdas Company and releases on <strong>1 October 2026</strong>. From that date it is distributed to the usual ebook stores — Amazon Kindle, Kobo, Apple Books, bol.com, Barnes &amp; Noble and Bookshop.org among them — and to library apps such as OverDrive, cloudLibrary, Hoopla and BorrowBox. Searching the title or the ISBN in whichever one you already use will find it.</p>
+
+    <h3 class="kop">Willing to take up the argument?</h3>
+    <p>The reason for writing the book was to reach the people who actually build this technology, write the policy around it, and design the services it runs through — and a book only does that if it gets argued with.</p>
+    <p>So the offer is specific: <strong>if you are prepared to have that conversation, I will gladly send you the complete book.</strong> Agreeing with me or taking it apart — both are useful; disagreement is arguably more so. One line about where you stand is enough. No form, no mailing list.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/robbert-brantz-6021399/" target="_blank" rel="noopener">Start the conversation on LinkedIn</a>
+      <a class="btn btn-ghost" href="mailto:robbert@zonderstropdas.com?subject=The%20book%20%E2%80%94%20where%20I%20stand">Write to me directly</a>
+    </div>
+
+    <h3 class="kop">Read the opening first</h3>
+    <p>Cover, contents, prologue and the full first chapter — nine pages, no email required.</p>
+    <div class="btn-row">
+      <!-- EDIT ME: add look-inside.pdf to the repository (the 9-page preview) -->
+      <a class="btn btn-ghost" href="look-inside.pdf" target="_blank" rel="noopener">Download the preview (PDF)</a>
+    </div>
+
+    <dl class="facts">
+      <div class="fact"><dt>Title</dt><dd>AI Won't Wipe My Mother's Ass</dd></div>
+      <div class="fact"><dt>Subtitle</dt><dd>Why care must be at the core of the age of artificial intelligence</dd></div>
+      <div class="fact"><dt>Author</dt><dd>Robbert Brantz</dd></div>
+      <div class="fact"><dt>Publisher</dt><dd>Zonder Stropdas Company</dd></div>
+      <div class="fact"><dt>Publication date</dt><dd>1 October 2026</dd></div>
+      <div class="fact"><dt>Format</dt><dd>Ebook (ePub 3, reflowable) &middot; 22 chapters, approx. 50 pages</dd></div>
+      <div class="fact"><dt>Language</dt><dd>English</dd></div>
+      <div class="fact"><dt>ISBN</dt><dd>978-90-8377-360-5</dd></div>
+      <div class="fact"><dt>Price</dt><dd>&euro;8.99 / $9.99</dd></div>
+    </dl>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section id="author">
   <div class="wrap">
-    <h2>Praten?</h2>
-    <p>Herken je iets in dit verhaal, of denk je: daar wil ik het weleens over hebben? Mail gerust. En heb je zelf een idee en zoek je iemand die meedenkt — van eerste ingeving tot proof of concept — dan ben je net zo welkom. Een goed gesprek is nooit weggegooide tijd, en kost ook niets. En wordt het daarna serieus? Dan groeien de afspraken vanzelf mee.</p>
+    <h2>About the author</h2>
+    <div class="author-grid">
+      <img src="logo.png" alt="Zonder Stropdas logo — a hand letting go of a necktie" style="mix-blend-mode:multiply;" loading="lazy">
+      <div>
+        <p><strong>Robbert Brantz</strong> never went to university and learned everything else. Thirty-six years of work, business and technology up close — from recording computer games onto a cassette tape as a child, to ABN AMRO, to two decades as an independent working for nearly every large financial institution in the Netherlands, to building AI-powered products today.</p>
+        <p>Along the way: interim director of the Dutch Platform for Independent Entrepreneurs, board director of the knowledge institute KIZO, co-author of the European study <em>Future Working: The Rise of Europe's Independent Professionals</em>, two-time award-winning solver at the open innovation platform InnoCentive — including, in 2012, a prize for a vision on large-scale human-machine teamwork, twelve years before the world caught up with the question.</p>
+        <p>He writes and builds under one banner: <em>de mens in het proces</em> — the human being in the process.</p>
+        <div class="btn-row">
+          <a class="btn btn-ghost" href="about.html">Read the full story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt contact" id="contact">
+  <div class="wrap">
+    <h2>Press, podcasts and speaking</h2>
+    <p>For interviews, review copies, podcast appearances or a talk on what 36 years of digitisation actually taught me — write to me directly. I answer my own email.</p>
     <p style="margin-top:1.8rem;"><a class="email" href="mailto:robbert@zonderstropdas.com">robbert@zonderstropdas.com</a></p>
   </div>
 </section>
 
 <footer>
-  zonderstropdas.com — de mens in het proces<br>KvK 27277851
+  zonderstropdas.com — the human being in the process<br>
+  <a href="about.html">About</a> &middot; <a href="about-nl.html">Over Robbert (NL)</a><br>
+  Zonder Stropdas Company &middot; KvK 27277851
 </footer>
 
 </body>
