@@ -40,6 +40,9 @@
 | `bmgrb.html` | Projectpagina BMGRB (incl. knop naar bmgrb.com) |
 | `nomoclub.html` | Projectpagina NOMOCLUB Music (incl. link nomoclub.com) |
 | `dogsymmetry.html` | Projectpagina Dogsymmetry |
+| `waakhond.html` | Productpagina Waakhond (NL) — ook marketing- en support-URL in App Store/Google Play |
+| `waakhond-privacy.html` | Privacybeleid Waakhond — privacy-URL in App Store/Google Play. **Niet verplaatsen of hernoemen** zolang de app in de winkels staat. |
+| `waakhond-voorwaarden.html` | Gebruiksvoorwaarden Waakhond. Zelfde regel: URL niet wijzigen. |
 | `logo.png` | Het echte Zonder Stropdas-logo (hand laat stropdas vallen). Ook favicon op alle pagina's. |
 | `bluez.jpg` | Bluez op het strand bij Arromanches (sectie "Wat het leven deed") |
 | `certificaat-human-machine.jpg` / `certificaat-drivers.jpg` | De twee InnoCentive-certificaten (2012) |
